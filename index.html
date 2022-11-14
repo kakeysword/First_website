@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+<link rel="stylesheet" href="master.css"/>
+
+
+  <header>
+    <title>Carol Dong</title>
+  </header>
+
+  <div class="Title">
+    <h1>Carol Dong</h1>
+    <h4>Senior Computer Science Co-op Student</h4>
+  </div>
+
+  <div class="AboutMe">
+    <link rel="stylesheet" href="master.css"/>
+    <div class = "AboutMeTitle">
+      <h1>About Me</h1>
+    </div>
+    <div class = "AboutMeBody">
+      <p>Hi I'm Carol Dong, a senior high school student
+      planning to pursue Computer Science in post-secondary. </p>
+    </div>
+  <div class = "StudyImage">
+    <img src="images/studying.JPEG" alt="Studying" class="Study">
+  </div>
+  </div>
+
+  <div class="Projects">
+    <link rel="stylesheet" href="master.css"/>
+    <div class="ProjectsTitle">
+      <h1>Projects</h1>
+    </div>
+    <h1>Fibonacci Spiral</h1>
+    <p>This is the final project that I made for Computer Science 11,
+    which is when I first learned how to code. It is a visual
+  representation of the Fibonacci spiral.</p>
+
+    <img src="images/Fibonacci spiral.jpg" class="Spiral">
+    <a href ="https://py3.codeskulptor.org/#user307_ndHemZqPXZ_4.py">Fibonacci Spiral</a>
+    <h1>Tangent and Normal Lines of Parametric Functions</h1>
+    <p>This project plots the tangent lines and
+      normal lines of a parametric function using calculus concepts and object-oriented programming.</p>
+
+    <img src="images/Beautiful Donut.jpg" class="Donut">
+        <a href ="https://py3.codeskulptor.org/#user307_dNFI99pdK8_0.py">Tangent and Normal Lines of Parametric Functions</a>
+  </div>
+  <br>
+  <div class ="WorkExperience">
+    <div class = "WorkExpTitle">
+      <h1>Work Experience</h1>
+    </div>
+    <p>As a piano tutor, I assisted piano students during their practice sessions to accelerate progress in musical technique and understanding.
+      I demonstrated and applied effective practicing techniques tailored to students' skills and pieces so that they could incorporate what they learned
+      into their own practice sessions.</p>
+    <img src="images/Piano.jpg" class = "Piano">
+  </div>
+  <br>
+  <div class ="ContactMeTitle">
+    <h1>Contact Me!</h1>
+  </div>
+  <div class="ContactMe">
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form id="my-form" action="https://formspree.io/f/xjvzjbjz" method="POST">
+      <label>Name:</label>
+      <input type="text" name = "name"/>
+      <label>Email:</label>
+      <input type="email" name="email" />
+      <label>Message:</label>
+      <input type="text" name="message" />
+      <button id="my-form-button">Submit</button>
+      <p id="my-form-status"></p>
+    </form>
+<!-- Place this script at the end of the body tag -->
+  <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thanks for your submission!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+      </script>
+      <br>
+
+  </div>
+
+
+
+</html>

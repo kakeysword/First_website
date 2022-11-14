@@ -1,0 +1,90 @@
+/* Cascading stylesheet for the website */
+
+/* Text inside these asterisks and slashes are comments for human */
+
+  a {
+    /* set the text color to blue here */
+    color: white;
+    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+  }
+
+  a:hover {
+    /* set the text color to red here */
+    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
+  }
+
+  body {
+    /* set the background color here */
+    background-color:#213037;
+    /* set the text color to black here */
+    color: white;
+    /* set the font here */
+    font-family: monospace, Arial, sans-serif;
+    background-image: url('space.PNG');
+
+   }
+  div.Title {
+    text-align: center;
+    font-size; 150px
+  }
+
+  div.AboutMe{
+
+  }
+  div.AboutMeTitle {
+    font-size: xx-large;
+    text-align: center;
+
+  }
+  div.AboutMeBody {
+    text-align: center;
+
+    margin:
+
+  }
+
+  .Study {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+  }
+  div.Projects{
+    text-align: center;
+
+  }
+  div.ProjectsTitle {
+    font-size: xx-large;
+    text-align: center;
+  }
+  .Spiral {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26em;
+
+  }
+
+  .Donut {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26em;
+  }
+  .WorkExperience {
+    text-align: center
+  }
+  .Piano {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+
+  }
+  div.ContactMeTitle {
+    font-size: xx-large;
+    text-align: center;
+  }
+  div.ContactMe{
+    text-align: center;
+  }
